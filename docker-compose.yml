@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: 
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
+  
+  database:
+    image: postgres:15.8-alpine
+    env_file:
+      - .env
+    

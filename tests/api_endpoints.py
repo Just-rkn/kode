@@ -1,0 +1,5 @@
+BASE_URL = '/api/v1/'
+CREATE_USER_URL = BASE_URL + 'users/'
+GET_TOKEN_URL = BASE_URL + 'jwt/create/'
+GET_NOTES_URL = BASE_URL + 'notes/'
+SET_ACCESS_URL = BASE_URL + 'note-access/'
